@@ -182,7 +182,7 @@ module WinRM
         else
           @retryable = true
           decrypted_body = winrm_decrypt(resp.body)
-          @logger.debug "Winrm body #{resp.body}"
+          @logger.warn "Winrm body #{resp.body}"
           log_soap_message(decrypted_body)
           WinRM::ResponseHandler.new(decrypted_body, resp.status).parse_to_xml
         end
