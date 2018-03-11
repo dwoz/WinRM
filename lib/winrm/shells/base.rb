@@ -135,7 +135,7 @@ module WinRM
         reset_on_error(e)
         retry
       ensure
-        cleanup_command(command_id) if command_id
+        #cleanup_command(command_id) if command_id
       end
 
       private
